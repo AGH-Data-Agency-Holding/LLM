@@ -36,20 +36,22 @@ L’objectif est de fournir un système **hybride** et **résilient**, capable d
 ---
 
 ## 🗂️ Structure du Projet
+
+
+```text
 client_llm/
-├── init.py
+├── __init__.py
 ├── backend.py              # Backend FastAPI simulant un serveur distant
 ├── llm_client.py           # Gestion du LLM local / distant / serveur global
 ├── main_flow.py            # Flux principal (choix offline / online / server)
-├── local_db.py             # Initialisation et recherche dans les DB locales
-├── recipe_db           
-├── surrah_db        
+├── local_db.py             # Initialisation et recherche dans les DB locales (Recettes & Quran)
+├── recipe_db            
+├── surrah_db           
 ├── data/
-│   ├── recipes.json
-│   ├── quran_complete.json
+│   ├── recipes.json        # Données JSON des recettes
+│   ├── quran_complete.json # Données JSON complètes du Coran
 │   
 └── README.md
-
 ---
 
 ## ⚙️ Installation
