@@ -47,7 +47,7 @@ Ce projet offre une architecture flexible, performante et adaptée à différent
 - Séparation claire entre les couches :
     - `local_db.py` : gestion des bases locales (Recettes + Coran)
     - `llm_client.py` : communication avec les modèles IA (local/distant)
-    - `backend.py` : API FastAPI simulée pour test local
+    - `backend_local.py` : API FastAPI simulée pour test local
 - Facile à étendre avec d’autres domaines (ex. Qissas, Hadith, etc.).
 
 ### 🔹 3. Intégration hybride (LLM + données structurées)
@@ -87,8 +87,8 @@ client_llm/
 │   ├── quran_complete.json # Données JSON complètes du Coran
 │   
 └── README.md
----
 
+``` 
 ## ⚙️ Installation
 
 ### 🧩 Prérequis
@@ -101,19 +101,21 @@ client_llm/
 ### 🧰 Installation des dépendances
 ```bash
 pip install fastapi uvicorn requests pydantic
+
+🔸 Mode Offline
 python3 -m client_llm.main_flow
 Ingrédient à rechercher : tomate
 Mode (offline/online/server) : offline
 Résultats locaux :
 - Quiche tomates et épinards
 
-Mode Online (Backend Local FastAPI)
-uvicorn client_llm.backend:app --reload
+🔸 Mode Online (Backend Local FastAPI)
 python3 -m client_llm.main_flow
 Mode (offline/online/server) : online
 Aucune recette sur le serveur. Génération LLM distant...
 Recette générée par LLM distant pour 'Recette avec l'ingrédient tomate' (simulation)
-Mode Server (RAG + Redis)
+```
+## Mode Server (RAG + Redis)
 python3 -m client_llm.main_flow
 Mode (offline/online/server) : server
 [Cache Redis] La première sourate du Coran est Al-Fatiha.
