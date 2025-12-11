@@ -45,8 +45,8 @@ client_llm/
 ├── llm_client.py           # Gestion du LLM local / distant / serveur global
 ├── main_flow.py            # Flux principal (choix offline / online / server)
 ├── local_db.py             # Initialisation et recherche dans les DB locales (Recettes & Quran)
-├── recipe_db            
-├── surrah_db           
+├── recipe_db               # Base locale SQLite des recettes
+├── surrah_db               # Base locale SQLite des sourates
 ├── data/
 │   ├── recipes.json        # Données JSON des recettes
 │   ├── quran_complete.json # Données JSON complètes du Coran
