@@ -2,7 +2,6 @@ import requests
 import subprocess
 from .local_db import search_recipes_local
 
-
 # -----------------------------
 # 🌍 URLs des endpoints
 # -----------------------------

@@ -7,7 +7,6 @@ RECIPES_BACKEND_URL = "http://127.0.0.1:8000/api/recipes"
 SURRAH_BACKEND_URL = "http://127.0.0.1:8000/api/surrah"
 
 
-
 # ==============================
 # 🍽️ RECETTES : Backend + Local
 # ==============================

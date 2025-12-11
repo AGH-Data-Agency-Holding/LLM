@@ -1,7 +1,6 @@
 import sqlite3
 from pathlib import Path
 
-
 # Chemins vers les bases de données
 SURRAH_DB_PATH = Path(__file__).parent / "surrah.db"
 RECIPES_DB_PATH = Path(__file__).parent / "recipes.db"
