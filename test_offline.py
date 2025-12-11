@@ -1,5 +1,6 @@
 from client_llm.local_search import search_recipes_offline
 
+
 # Prompt de test
 ingredient = "poulet"  # ou tout autre ingrédient
 

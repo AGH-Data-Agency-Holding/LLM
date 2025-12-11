@@ -4,6 +4,7 @@ from fastapi import Request
 import json
 from pathlib import Path
 
+
 app = FastAPI(title="Recettes & Quran API")
 
 # Autoriser toutes les origines pour le test

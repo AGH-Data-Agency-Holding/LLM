@@ -2,6 +2,7 @@ import requests
 import sqlite3
 from pathlib import Path
 
+
 # ==============================
 # 📁 Chemins vers les bases locales
 # ==============================
