@@ -34,6 +34,41 @@ L’objectif est de fournir un système **hybride** et **résilient**, capable d
 | **server** | Serveur LLM RAG | Connexion à l’API centralisée avec cache Redis |
 
 ---
+## ✔️ Avantages du Projet
+
+Ce projet offre une architecture flexible, performante et adaptée à différents environnements d’exécution.
+
+### 🔹 1. Multi-mode de fonctionnement
+- **Offline** : fonctionne entièrement sans connexion réseau grâce aux bases locales SQLite et au modèle LLM quantifié (Mistral).
+- **Online** : interagit avec le backend FastAPI pour récupérer ou synchroniser les données.
+- **Server** : se connecte au serveur LLM global (RAG + Redis) pour bénéficier du cache et de la génération contextuelle.
+
+### 🔹 2. Architecture modulaire et extensible
+- Séparation claire entre les couches :
+    - `local_db.py` : gestion des bases locales (Recettes + Coran)
+    - `llm_client.py` : communication avec les modèles IA (local/distant)
+    - `backend.py` : API FastAPI simulée pour test local
+- Facile à étendre avec d’autres domaines (ex. Qissas, Hadith, etc.).
+
+### 🔹 3. Intégration hybride (LLM + données structurées)
+- Combine la **génération par IA** (LLM Mistral) avec la **recherche locale rapide** (SQLite).
+- Permet des suggestions intelligentes tout en gardant la cohérence des données.
+
+### 🔹 4. Performances et robustesse
+- Cache intelligent pour réduire le coût des appels au LLM.
+- Chargement rapide des données locales (moins de 200 ms).
+- Inférence locale optimisée (modèle quantifié ~300 Mo).
+
+### 🔹 5. Facilité de test et de déploiement
+- Compatible **terminal / mobile / backend**.
+- Testable via `python3 -m client_llm.main_flow` sans dépendances externes lourdes.
+- Intégration directe dans Android Studio pour développement mobile.
+
+---
+
+🚀 **En résumé :**
+> `client_llm` agit comme un cerveau local intelligent, capable d’utiliser un modèle IA en mode hors-ligne, de communiquer avec un serveur distant, et de s’intégrer dans un système RAG complet.
+---
 
 ## 🗂️ Structure du Projet
 
@@ -82,38 +117,3 @@ Mode Server (RAG + Redis)
 python3 -m client_llm.main_flow
 Mode (offline/online/server) : server
 [Cache Redis] La première sourate du Coran est Al-Fatiha.
-
-## ✔️ Avantages du Projet
-
-Ce projet offre une architecture flexible, performante et adaptée à différents environnements d’exécution.
-
-### 🔹 1. Multi-mode de fonctionnement
-- **Offline** : fonctionne entièrement sans connexion réseau grâce aux bases locales SQLite et au modèle LLM quantifié (Mistral).
-- **Online** : interagit avec le backend FastAPI pour récupérer ou synchroniser les données.
-- **Server** : se connecte au serveur LLM global (RAG + Redis) pour bénéficier du cache et de la génération contextuelle.
-
-### 🔹 2. Architecture modulaire et extensible
-- Séparation claire entre les couches :
-  - `local_db.py` : gestion des bases locales (Recettes + Coran)  
-  - `llm_client.py` : communication avec les modèles IA (local/distant)  
-  - `backend.py` : API FastAPI simulée pour test local  
-- Facile à étendre avec d’autres domaines (ex. Qissas, Hadith, etc.).
-
-### 🔹 3. Intégration hybride (LLM + données structurées)
-- Combine la **génération par IA** (LLM Mistral) avec la **recherche locale rapide** (SQLite).
-- Permet des suggestions intelligentes tout en gardant la cohérence des données.
-
-### 🔹 4. Performances et robustesse
-- Cache intelligent pour réduire le coût des appels au LLM.
-- Chargement rapide des données locales (moins de 200 ms).
-- Inférence locale optimisée (modèle quantifié ~300 Mo).
-
-### 🔹 5. Facilité de test et de déploiement
-- Compatible **terminal / mobile / backend**.  
-- Testable via `python3 -m client_llm.main_flow` sans dépendances externes lourdes.
-- Intégration directe dans Android Studio pour développement mobile.
-
----
-
-🚀 **En résumé :**
-> `client_llm` agit comme un cerveau local intelligent, capable d’utiliser un modèle IA en mode hors-ligne, de communiquer avec un serveur distant, et de s’intégrer dans un système RAG complet.
