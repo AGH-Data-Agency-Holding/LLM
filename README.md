@@ -114,8 +114,8 @@ python3 -m client_llm.main_flow
 Mode (offline/online/server) : online
 Aucune recette sur le serveur. Génération LLM distant...
 Recette générée par LLM distant pour 'Recette avec l'ingrédient tomate' (simulation)
-```
-## Mode Server (RAG + Redis)
+
+🔸 Mode Server (RAG + Redis)
 python3 -m client_llm.main_flow
 Mode (offline/online/server) : server
 [Cache Redis] La première sourate du Coran est Al-Fatiha.
