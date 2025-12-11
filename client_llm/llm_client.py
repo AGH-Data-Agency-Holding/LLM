@@ -1,6 +1,6 @@
 import requests
 import subprocess
-from client_llm.recipe_db import search_recipes_local
+from .local_db import search_recipes_local
 
 # -----------------------------
 # 🌍 URLs des endpoints
@@ -18,7 +18,7 @@ def generate_local(prompt: str) -> str:
     try:
         cmd = [
             "./llama-cli",
-            "-m", "/Users/nouamanebahij/models/mistral-7b-v0.1.Q4_K_M.gguf",
+            "-m", "/Users/nouamanebahij/AndroidStudioProjects/LLM_CLIENT/models/mistral-7b-v0.1.Q4_K_M.gguf",
             "-p", prompt,
             "--ctx-size", "512",
             "--batch-size", "1",

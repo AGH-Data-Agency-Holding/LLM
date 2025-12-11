@@ -1,10 +1,11 @@
-from client_llm.recipe_search import generate_recipe_offline
+from client_llm.local_search import search_recipes_offline
 
 # Prompt de test
-prompt = "Recettes à base de poulet"
+ingredient = "poulet"  # ou tout autre ingrédient
 
 # Appel du mode hors ligne
-result = generate_recipe_offline(prompt)
+result = search_recipes_offline(ingredient)
 
 print("=== Résultat ===")
-print(result)
+for r in result:
+    print(f"Nom: {r[0]}\nIngrédients: {r[1]}\nInstructions: {r[2]}\n{'-'*40}")

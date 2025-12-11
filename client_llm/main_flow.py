@@ -1,8 +1,7 @@
 import requests
 import sqlite3
-from client_llm.local_db import search_recipes_local, search_surrah_local
-from client_llm.llm_client import generate_remote, generate_from_server, generate_recipe_offline
-
+from .local_db import search_recipes_local, search_surrah_local
+from .llm_client import generate_remote, generate_from_server, generate_recipe_offline
 # --- URLs du backend ---
 RECIPES_BACKEND_URL = "http://127.0.0.1:8000/api/recipes"
 SURRAH_BACKEND_URL = "http://127.0.0.1:8000/api/surrah"

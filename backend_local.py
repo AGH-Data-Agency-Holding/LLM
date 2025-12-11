@@ -16,7 +16,7 @@ app.add_middleware(
 
 # Fichiers JSON
 RECIPES_FILE = Path(__file__).parent / "client_llm" / "data" / "recipes.json"
-SURRAH_FILE = Path(__file__).parent / "client_quran" / "data" / "quran_complete.json"
+SURRAH_FILE = Path(__file__).parent / "client_llm" / "data" / "quran_complete.json"
 
 with open(RECIPES_FILE, "r", encoding="utf-8") as f:
     RECIPES = json.load(f)
