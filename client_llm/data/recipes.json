@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Quiche tomates et épinards",
+    "ingredients": ["tomates", "œufs", "lait", "fromage", "jambon", "pâte feuilletée"],
+    "instructions": "Préchauffer le four à 180°C ...",
+    "type": "plat"
+  },
+  {
+    "id": 2,
+    "name": "Omelette au fromage",
+    "ingredients": ["œufs", "fromage", "lait", "sel", "poivre"],
+    "instructions": "Battre les œufs avec le lait ...",
+    "type": "petit-déjeuner"
+  }
+]
