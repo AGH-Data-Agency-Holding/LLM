@@ -73,7 +73,7 @@ Ce projet offre une architecture flexible, performante et adaptée à différent
 ## 🗂️ Structure du Projet
 
 
-```text
+
 client_llm/
 ├── __init__.py
 ├── backend.py              # Backend FastAPI simulant un serveur distant
